@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - PointInsert
+  - Equipement
+  - SerrureBT
+  - KeyDisjon
+  - PlaqueIsolant
+  - Q2
+  - PointInsertCle
+  - X1
+  - Barre de Terme
+  - Manivelle
+  - Levier
+  - Door1
+  - Door2
+  - Object
+  - Sacoche
+  - DoorQuestOne
+  - SwitchQuestTwo
+  - BarQuestThree
+  - KeyQuestFour
+  - EPIQuestFive
+  - EPIFalse
+  - TableQuestSix
+  - BarQuestSeven
+  - InsertQuestNine
+  - BarQuestTen
+  - UseBarQuestEleven
+  - TakeKeyQuestFourteen
+  - UseKeyQuestFifteen
+  - LevierDisjoncteurQuestTwelve
+  - UseLevierDisjoncteurQuestThirteen
+  - KeyQuestHeight
+  - QC1
+  - QC2
+  - ErrorTestQuestFifteen
+  - Lampe
+  - UseGreenButtonQuestSixteen
+  - UseTabouretQuestSeventeen
+  - InsertKeyQuestHeighteen
+  - TakeBarQuestNineteen
+  - UseBarQuestTwenty
+  - TabouretQuestTwentyOne
+  - BarQuestTwentyTwo
+  - KeyQuestTwentyThree
+  - TakeBarQuestTwentyFour
+  - UseBarQuestTwentyFive
+  - TabouretQuestTwentySix
+  - BarQuestTwentySeven
+  - TakeBarQuestTwentyNine
+  - UseBarQuestThirty
+  - UseKeyQuestThirtyOne
+  - UseManivelleQuestThirtyTwo
+  - UseKeyQuestThirtyThree
+  - UseManivelleQuestThirtyFour
+  - KeyQuestTwentyHeight
+  - TakeBarQuestTwentySeven
+  - SwitchQuestThirtyFive
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - Interact
+  - Outline
+  - Invisible
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
