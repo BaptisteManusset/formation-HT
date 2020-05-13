@@ -15,7 +15,7 @@ namespace ItsBaptiste.QuestSystem
 
     bool isErrorNotAlreadyAppend = false;
 
-    [SerializeField] QuestOutline[] objectToHighlight;
+    QuestOutline[] objectToHighlight;
 
 
 
