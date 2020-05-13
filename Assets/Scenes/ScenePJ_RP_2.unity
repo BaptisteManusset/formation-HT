@@ -2846,6 +2846,23 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ui quest
       objectReference: {fileID: 0}
+    - target: {fileID: 1396407372604318804, guid: 0e08144175e272e4a8034c1133221816,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396407372604318804, guid: 0e08144175e272e4a8034c1133221816,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 1396407372604318804, guid: 0e08144175e272e4a8034c1133221816,
+        type: 3}
+      propertyPath: m_text
+      value: '<size=150%>Titre</size>
+
+        Description de l''etape'
+      objectReference: {fileID: 0}
     - target: {fileID: 1953882688180528956, guid: 0e08144175e272e4a8034c1133221816,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -2855,6 +2872,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_text
       value: modifier le texte dans le errorManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338908040431657798, guid: 0e08144175e272e4a8034c1133221816,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4338908040431657798, guid: 0e08144175e272e4a8034c1133221816,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8550953961071140600, guid: 0e08144175e272e4a8034c1133221816,
         type: 3}
@@ -36771,7 +36798,7 @@ GameObject:
   - component: {fileID: 1515358915}
   - component: {fileID: 1515358914}
   m_Layer: 0
-  m_Name: Plane
+  m_Name: Plan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
