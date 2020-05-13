@@ -96,32 +96,30 @@ namespace ItsBaptiste.QuestSystem
     /// <summary>
     /// fonction qui permet de completer l'etape et qui choisie l'etape suivante selon si l'etape actuelle est reussite ou non (gerer par le bool isFail)
     /// </summary>
-    /// <param name="isFail">definie si la quete est reussie ou non</param>
+    /// <param name="completeWithError">definie si la quete est reussie ou non</param>
     [ContextMenu("Completer l'étape")]
-    public static void CompleteStep(bool isFail = false)
+    public static void CompleteStep(bool completeWithError = false)
     {
 
+      Debug.Log(QuestManager.instance.GetQuestElement().gameObject.name, QuestManager.instance.GetQuestElement().gameObject);
+
+      Debug.DebugBreak();
+
+
+      // verifie si une quest est definie
       if (QuestManager.instance.GetQuestElement() != null)
       {
-        if ((QuestManager.instance.GetQuestElement().step.next != null && isFail == false) ||
-          (QuestManager.instance.GetQuestElement().step.fail != null && isFail == true))
+
+
+        // si l'etape posséde une suite (next) & qu'elle n'est pas raté (isFail)
+        // si l'etape posséde une suite raté (fail) & qu'elle est raté  (isFail)
+        if ((QuestManager.instance.GetQuestElement().step.next != null && completeWithError == false) ||
+            (QuestManager.instance.GetQuestElement().step.fail != null && completeWithError == true))
         {
 
 
           #region go to next step
-          if (isFail)
-          {
-            QuestManager.instance.GetQuestElement().step.isfail = true;
-            QuestManager.instance.SetQuestElement(QuestManager.instance.GetQuestElement().step.fail);
-            QuestManager.instance.GetQuestElement().step.isfail = true;
-
-            #region effect de particule pour l'electro choque #Claude François
-
-
-
-            #endregion
-
-          } else
+          if (completeWithError == false)
           {
             QuestManager.instance.SetQuestElement(QuestManager.instance.GetQuestElement().step.next);
 
@@ -129,15 +127,29 @@ namespace ItsBaptiste.QuestSystem
             PlaySound(QuestManager.instance.audioSucess);
             #endregion
 
+          } else
+          {
+            QuestManager.instance.GetQuestElement().step.isfail = true;
+            QuestManager.instance.SetQuestElement(QuestManager.instance.GetQuestElement().step.fail);
+            QuestManager.instance.GetQuestElement().step.isfail = true;
+
+            #region audio & Ui
+            PlaySound(QuestManager.instance.audioFail);
+            QuestManager.instance.errorUi.SetActive(true);
+
+            #endregion
+
+
+
+
           }
           #endregion
 
 
         } else
         {
-          QuestManager.instance.QuestIsFinish(); Debug.Log("il n'y a pas de suite");
-
-
+          QuestManager.instance.QuestIsFinish();
+          QuestManager.instance.enabled = false;
         }
       }
     }
@@ -156,6 +168,11 @@ namespace ItsBaptiste.QuestSystem
 
     private void QuestIsFinish()
     {
+      foreach (var item in FindObjectsOfType<QuestOutline>())
+      {
+        item.DisableOutline();
+      }
+
       isFinish = true;
       GetComponent<WinManager>().PlayWin();
     }
@@ -185,7 +202,7 @@ namespace ItsBaptiste.QuestSystem
     }
 
     /// <summary>
-    /// Definition de l'etape actuel de la quete et initilisation des variables d'etat
+    /// Definition de l'etape actuel de la quete et initilisation des variables d'etape
     /// </summary>
     /// <param name="elemen">nouvelle etape</param>
     public void SetQuestElement(QuestElement elemen)
@@ -200,10 +217,15 @@ namespace ItsBaptiste.QuestSystem
       #endregion
 
       actualStepElement = elemen;
+      #region editor
 #if UNITY_EDITOR
-      Selection.objects = new GameObject[1] { GetQuestElement().gameObject };
-#endif
+      if (GetQuestElement())
+        if (GetQuestElement().gameObject)
+          Selection.objects = new GameObject[1] { GetQuestElement().gameObject };
+      //Selection.objects = new GameObject[1] { GetQuestElement().gameObject };
 
+#endif
+      #endregion
 
 
       #region next step
@@ -215,6 +237,7 @@ namespace ItsBaptiste.QuestSystem
       #endregion
     }
 
+    #region editor
 #if UNITY_EDITOR
     private void OnDrawGizmos()
     {
@@ -244,8 +267,8 @@ namespace ItsBaptiste.QuestSystem
 
     private void OnGUI()
     {
+      return;
       string ntm = "";
-      Selection.objects = new GameObject[1] { GetQuestElement().gameObject };
 
       ntm += GetQuestElement().number + "\n";
       ntm += GetQuestElement().gameObject.name + " ";
@@ -255,6 +278,7 @@ namespace ItsBaptiste.QuestSystem
       GUI.Label(new Rect(10, 600, 1200, 600), ntm);
     }
 #endif
+    #endregion
 
     /// <summary>
     /// set the sound and play

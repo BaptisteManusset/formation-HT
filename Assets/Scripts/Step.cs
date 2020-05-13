@@ -16,8 +16,10 @@ namespace ItsBaptiste.QuestSystem
     public bool isfail = false;
     public bool isERROR = false;
 
-    [Header("Suite")] public QuestElement next;
+    [Header("Liens")] public QuestElement next;
     public QuestElement previous;
+
+    [Header("Fail")]
     public QuestElement fail;
   }
 }

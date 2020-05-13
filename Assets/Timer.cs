@@ -9,6 +9,7 @@ public class Timer : MonoBehaviour
   public bool isPlaying = false;
   [SerializeField] string format = "#0:00.000";
   public int count = 1;
+  public int errorCount = 0;
 
   [Header("Temps formatée")]
   public string formattedTime;

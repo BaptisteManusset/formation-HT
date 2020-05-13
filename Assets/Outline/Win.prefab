@@ -527,7 +527,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1177176168422487597}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ui: {fileID: 1177176167003364496}
   formatting: "<size=300%>F\xE9licitation</size>\nVous avez reussie votre mission,\nTemps
-    Total : {0}\nTemps Actuel: {1}\nNbr d'essaie: {2}"
+    Total  : {0}\nTemps Actuel : {1}\nNbr d'essaie : {2}\nNbr d'erreur : {3}"
 --- !u!114 &1177176168422487587
 MonoBehaviour:
   m_ObjectHideFlags: 0

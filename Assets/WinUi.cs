@@ -18,7 +18,7 @@ public class WinUi : MonoBehaviour
       t = Timer.instance;
 
     t.PauseTimer();
-    ui.text = string.Format(formatting, t.formattedTime, t.formattedTimeActual, t.count);
+    ui.text = string.Format(formatting, t.formattedTime, t.formattedTimeActual, t.count, t.errorCount);
 
   }
   private void Update()
@@ -37,6 +37,7 @@ Vous avez reussie votre mission,
 Temps Total  : {0}
 Temps Actuel : {1}
 Nbr d'essaie : {2}
+Nbr d'erreur : {3}
    */
   /*
 
