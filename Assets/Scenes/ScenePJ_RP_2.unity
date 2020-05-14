@@ -667,7 +667,7 @@ PrefabInstance:
     - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
         type: 3}
@@ -945,7 +945,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &49437149
 Transform:
   m_ObjectHideFlags: 0
@@ -2207,7 +2212,7 @@ PrefabInstance:
     - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
         type: 3}
@@ -2453,7 +2458,6 @@ GameObject:
   - component: {fileID: 181438068}
   - component: {fileID: 181438067}
   - component: {fileID: 181438066}
-  - component: {fileID: 181438069}
   m_Layer: 0
   m_Name: "SerrureCl\xE9Q2"
   m_TagString: Q2
@@ -2483,7 +2487,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181438064}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.02
   m_Height: 0.02
@@ -2536,20 +2540,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 181438064}
   m_Mesh: {fileID: 4300000, guid: 0aacc6dd0885b7444b9c18d833c760ff, type: 3}
---- !u!114 &181438069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 181438064}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 115f5ef94b39d0e40a66d27004c8c988, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hideOnClick: 0
-  desactiveOnClick: 0
 --- !u!1 &185436883
 GameObject:
   m_ObjectHideFlags: 0
@@ -6140,7 +6130,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &351109705
 Transform:
   m_ObjectHideFlags: 0
@@ -6479,13 +6474,13 @@ GameObject:
   - component: {fileID: 366787165}
   - component: {fileID: 366787164}
   - component: {fileID: 366787167}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Interrupteur022 (1)
   m_TagString: SwitchQuestThirtyFive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &366787163
 Transform:
   m_ObjectHideFlags: 0
@@ -11646,6 +11641,106 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 61.1}
   m_SizeDelta: {x: 281.1, y: 41.4}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1001 &707611089
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1819756384}
+    m_Modifications:
+    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.37818766
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.5546088
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.537
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.00000008146034
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8500848762168184302, guid: 7126c1fdd44839041a0d58f521f23b75,
+        type: 3}
+      propertyPath: m_Name
+      value: Door_Cabinet (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8500848762168184302, guid: 7126c1fdd44839041a0d58f521f23b75,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 7126c1fdd44839041a0d58f521f23b75, type: 3}
+--- !u!4 &707611090 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
+    type: 3}
+  m_PrefabInstance: {fileID: 707611089}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &707611091 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8500848762168184302, guid: 7126c1fdd44839041a0d58f521f23b75,
+    type: 3}
+  m_PrefabInstance: {fileID: 707611089}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &707611092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 707611091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115f5ef94b39d0e40a66d27004c8c988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hideOnClick: 1
+  desactiveOnClick: 0
 --- !u!1 &708725971
 GameObject:
   m_ObjectHideFlags: 0
@@ -12130,7 +12225,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &735745175
 Transform:
   m_ObjectHideFlags: 0
@@ -12355,10 +12455,37 @@ MonoBehaviour:
     isERROR: 0
     next: {fileID: 0}
     previous: {fileID: 1113099753}
-    fail: {fileID: 0}
+    fail: {fileID: 1967939509}
   number: 0
-  effect: {fileID: 1967939508}
-  objectToHighlight: []
+  effect: {fileID: 1648142891}
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1422526024}
+        m_MethodName: EnableOutline
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 366787167}
+        m_MethodName: EnableOutline
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &739602621
 Transform:
   m_ObjectHideFlags: 0
@@ -18745,7 +18872,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &852072498
 Transform:
   m_ObjectHideFlags: 0
@@ -19183,7 +19315,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &865075971
 Transform:
   m_ObjectHideFlags: 0
@@ -19567,7 +19704,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &913397578
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21334,7 +21476,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &936158061
 GameObject:
   m_ObjectHideFlags: 0
@@ -26637,7 +26784,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &976246182
 Transform:
   m_ObjectHideFlags: 0
@@ -27068,7 +27220,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &986111058
 GameObject:
   m_ObjectHideFlags: 0
@@ -27397,7 +27554,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1015545951
 Transform:
   m_ObjectHideFlags: 0
@@ -27735,7 +27897,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1031854760
 Transform:
   m_ObjectHideFlags: 0
@@ -28422,7 +28589,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1055314631
 Transform:
   m_ObjectHideFlags: 0
@@ -29890,10 +30062,37 @@ MonoBehaviour:
     isERROR: 0
     next: {fileID: 739602620}
     previous: {fileID: 1627285911}
-    fail: {fileID: 0}
+    fail: {fileID: 1967939509}
   number: 0
-  effect: {fileID: 1967939508}
-  objectToHighlight: []
+  effect: {fileID: 1648142891}
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1422526019}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 366787162}
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!4 &1113099754
 Transform:
   m_ObjectHideFlags: 0
@@ -30045,7 +30244,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1120443943
 Transform:
   m_ObjectHideFlags: 0
@@ -31026,7 +31230,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1169823214
 Transform:
   m_ObjectHideFlags: 0
@@ -31348,7 +31557,7 @@ PrefabInstance:
     - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
         type: 3}
@@ -33338,7 +33547,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1341180642
 GameObject:
   m_ObjectHideFlags: 0
@@ -34178,7 +34392,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1365757957
 Transform:
   m_ObjectHideFlags: 0
@@ -34750,7 +34969,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1387340407
 GameObject:
   m_ObjectHideFlags: 0
@@ -35458,7 +35682,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1418945354
 GameObject:
   m_ObjectHideFlags: 0
@@ -35566,13 +35795,13 @@ GameObject:
   - component: {fileID: 1422526022}
   - component: {fileID: 1422526021}
   - component: {fileID: 1422526024}
-  m_Layer: 10
+  m_Layer: 8
   m_Name: Interrupteur019 (1)
   m_TagString: SwitchQuestThirtyFive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1422526020
 Transform:
   m_ObjectHideFlags: 0
@@ -35717,7 +35946,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1443763195
 GameObject:
   m_ObjectHideFlags: 0
@@ -36995,7 +37229,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1528200533
 Transform:
   m_ObjectHideFlags: 0
@@ -37597,7 +37836,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1564524168
 Transform:
   m_ObjectHideFlags: 0
@@ -37734,7 +37978,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1573145851
 Transform:
   m_ObjectHideFlags: 0
@@ -38340,7 +38589,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1627285910
 GameObject:
   m_ObjectHideFlags: 0
@@ -38380,10 +38634,15 @@ MonoBehaviour:
     isERROR: 0
     next: {fileID: 1113099753}
     previous: {fileID: 1693867766}
-    fail: {fileID: 0}
+    fail: {fileID: 1967939509}
   number: 0
-  effect: {fileID: 1967939508}
-  objectToHighlight: []
+  effect: {fileID: 1648142891}
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1627285912
 Transform:
   m_ObjectHideFlags: 0
@@ -39039,7 +39298,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1661097436
 Transform:
   m_ObjectHideFlags: 0
@@ -39484,7 +39748,23 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: DisableOutline
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1693867764
 GameObject:
   m_ObjectHideFlags: 0
@@ -39541,10 +39821,15 @@ MonoBehaviour:
     isERROR: 0
     next: {fileID: 1627285911}
     previous: {fileID: 1993970318}
-    fail: {fileID: 0}
+    fail: {fileID: 1967939509}
   number: 0
-  effect: {fileID: 1967939508}
-  objectToHighlight: []
+  effect: {fileID: 1648142891}
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1694023300
 GameObject:
   m_ObjectHideFlags: 0
@@ -40087,7 +40372,7 @@ MonoBehaviour:
   button: {fileID: 1344223615}
   inventary: {fileID: 1271086041}
   listDoors:
-  - doorQuestOne: {fileID: 5941587389395206085}
+  - doorQuestOne: {fileID: 707611091}
     open: 0
   - doorQuestOne: {fileID: 743027674}
     open: 0
@@ -45828,6 +46113,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 2729343636509131002, guid: 0656242595650e841abc801ca824e5cc,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2986449636575765067, guid: 0656242595650e841abc801ca824e5cc,
         type: 3}
       propertyPath: m_Name
@@ -45851,7 +46141,7 @@ PrefabInstance:
     - target: {fileID: 3553012535989065367, guid: 0656242595650e841abc801ca824e5cc,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0656242595650e841abc801ca824e5cc, type: 3}
@@ -46559,7 +46849,12 @@ MonoBehaviour:
     fail: {fileID: 1995891489}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1819756384
 Transform:
   m_ObjectHideFlags: 0
@@ -46571,10 +46866,10 @@ Transform:
   m_LocalPosition: {x: -1.1051877, y: 0.54704654, z: -6.5494504}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2850170159804314156}
   - {fileID: 162076999}
   - {fileID: 1178980372}
   - {fileID: 21400840}
+  - {fileID: 707611090}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -47697,7 +47992,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1885609788
 Transform:
   m_ObjectHideFlags: 0
@@ -47863,7 +48163,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1899090601
 GameObject:
   m_ObjectHideFlags: 0
@@ -49069,7 +49374,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 1648142891}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1967939510
 Transform:
   m_ObjectHideFlags: 0
@@ -49264,10 +49574,15 @@ MonoBehaviour:
     isERROR: 0
     next: {fileID: 1693867766}
     previous: {fileID: 1573145850}
-    fail: {fileID: 0}
+    fail: {fileID: 1967939509}
   number: 0
-  effect: {fileID: 1967939508}
-  objectToHighlight: []
+  effect: {fileID: 1648142891}
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1995891488
 GameObject:
   m_ObjectHideFlags: 0
@@ -49310,7 +49625,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 344569924}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1995891490
 Transform:
   m_ObjectHideFlags: 0
@@ -49518,7 +49838,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &2022685860
 Transform:
   m_ObjectHideFlags: 0
@@ -50085,7 +50410,12 @@ MonoBehaviour:
     fail: {fileID: 0}
   number: 0
   effect: {fileID: 0}
-  objectToHighlight: []
+  onQuestStart:
+    m_PersistentCalls:
+      m_Calls: []
+  onQuestEnd:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &2037255735
 Transform:
   m_ObjectHideFlags: 0
@@ -52553,81 +52883,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2081234856257709507}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &2850170159804314155
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 1819756384}
-    m_Modifications:
-    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0.37818766
-      objectReference: {fileID: 0}
-    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.5546088
-      objectReference: {fileID: 0}
-    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 1.5434504
-      objectReference: {fileID: 0}
-    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.00000008146034
-      objectReference: {fileID: 0}
-    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8500848762168184302, guid: 7126c1fdd44839041a0d58f521f23b75,
-        type: 3}
-      propertyPath: m_Name
-      value: Door_Cabinet
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 7126c1fdd44839041a0d58f521f23b75, type: 3}
---- !u!4 &2850170159804314156 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4873542615486463997, guid: 7126c1fdd44839041a0d58f521f23b75,
-    type: 3}
-  m_PrefabInstance: {fileID: 2850170159804314155}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3318598216012295450
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52831,26 +53086,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c46e0749e1a0a5b4d8ab2e6fde7a5c2d, type: 3}
---- !u!1 &5941587389395206085 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8500848762168184302, guid: 7126c1fdd44839041a0d58f521f23b75,
-    type: 3}
-  m_PrefabInstance: {fileID: 2850170159804314155}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5941587389395206086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5941587389395206085}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 115f5ef94b39d0e40a66d27004c8c988, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  hideOnClick: 1
-  desactiveOnClick: 0
 --- !u!1001 &6187133745313778054
 PrefabInstance:
   m_ObjectHideFlags: 0

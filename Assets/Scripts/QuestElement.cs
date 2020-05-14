@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace ItsBaptiste.QuestSystem
 {
@@ -16,6 +17,10 @@ namespace ItsBaptiste.QuestSystem
     bool isErrorNotAlreadyAppend = false;
 
     QuestOutline[] objectToHighlight;
+
+    [Space(30)]public UnityEvent onQuestStart;
+    public UnityEvent onQuestEnd;
+
 
 
 
@@ -33,15 +38,23 @@ namespace ItsBaptiste.QuestSystem
       }
     }
 
+    public void TriggerError()
+    {
+      if (step.isActif && step.isERROR && isErrorNotAlreadyAppend == false)
+      {
+        isErrorNotAlreadyAppend = true;
+        StartCoroutine(CallError());
+      }
+    }
+
+
     public IEnumerator CallError()
     {
-      Debug.Log("SetActive");
       effect.SetActive(true);
-      yield return new WaitForSeconds(1);
-      Debug.Log("errorUi");
+      yield return new WaitForSeconds(4);
+
       QuestManager.instance.errorUi.SetActive(true);
       yield return new WaitForSeconds(5);
-      Debug.Log("errorUi");
       PauseManager.instance.RestartLevel();
     }
     public void CompleteWithSucess()

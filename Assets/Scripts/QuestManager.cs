@@ -135,7 +135,9 @@ namespace ItsBaptiste.QuestSystem
 
             #region audio & Ui
             PlaySound(QuestManager.instance.audioFail);
-            QuestManager.instance.errorUi.SetActive(true);
+            //QuestManager.instance.errorUi.SetActive(true);
+            instance.GetQuestElement().TriggerError();
+
 
             #endregion
 
@@ -213,6 +215,7 @@ namespace ItsBaptiste.QuestSystem
         QuestManager.instance.GetQuestElement().step.isActif = false;
         QuestManager.instance.GetQuestElement().step.isComplete = true;
         QuestManager.instance.GetQuestElement().ToggleHighlight(false);
+        QuestManager.instance.GetQuestElement().onQuestEnd.Invoke();
       }
       #endregion
 
@@ -234,6 +237,8 @@ namespace ItsBaptiste.QuestSystem
       QuestManager.instance.GetQuestElement().step.isfail = false;
       QuestManager.instance.UpdateUis();
       QuestManager.instance.GetQuestElement().ToggleHighlight(true);
+      QuestManager.instance.GetQuestElement().onQuestStart.Invoke();
+
       #endregion
     }
 
@@ -267,7 +272,6 @@ namespace ItsBaptiste.QuestSystem
 
     private void OnGUI()
     {
-      return;
       string ntm = "";
 
       ntm += GetQuestElement().number + "\n";

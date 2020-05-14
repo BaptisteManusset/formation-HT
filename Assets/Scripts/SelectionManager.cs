@@ -305,7 +305,7 @@ public class SelectionManager : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-    RemoveLamp();
+    RemoveAndResetLamp();
 
     #region ! Vérification de la validation des différentes quêtes !
 
@@ -582,7 +582,7 @@ public class SelectionManager : MonoBehaviour
 
         case "Object":// Gère les Objets récupérables de la scène
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -599,7 +599,7 @@ public class SelectionManager : MonoBehaviour
 
         case "Sacoche":// Gère l'inventaire
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -626,7 +626,7 @@ public class SelectionManager : MonoBehaviour
 
         case "DoorQuestOne":// Gère les portes de la première quête
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -659,7 +659,7 @@ public class SelectionManager : MonoBehaviour
 
         case "SwitchQuestTwo":// Gère les interrupteurs de la quête 2
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -691,7 +691,7 @@ public class SelectionManager : MonoBehaviour
 
         case "BarQuestThree": // Gère la barre de terre de la quête 3
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -717,7 +717,7 @@ public class SelectionManager : MonoBehaviour
 
         case "KeyQuestFour": // Gère la récupération de la clé de la quête 4
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -742,7 +742,7 @@ public class SelectionManager : MonoBehaviour
 
         case "EPIQuestFive": // Gère la récupération des EPI de la quête 5
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -775,7 +775,7 @@ public class SelectionManager : MonoBehaviour
 
         case "EPIFalse":
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -789,7 +789,7 @@ public class SelectionManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
               Debug.Log("Gants troués check");
-              StartCoroutine(Error());
+              StartCoroutine(ErrorGants());
 
             }
             #endregion
@@ -799,7 +799,7 @@ public class SelectionManager : MonoBehaviour
 
         case "TableQuestSix": // Gère la récupération du tabouret de la quête 6
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -823,7 +823,7 @@ public class SelectionManager : MonoBehaviour
 
         case "BarQuestSeven": // Gère la barre de terre de la quête 7
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -849,7 +849,7 @@ public class SelectionManager : MonoBehaviour
 
         case "KeyQuestHeight": // Gère la récupération de la clé de la quête 8
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -874,7 +874,7 @@ public class SelectionManager : MonoBehaviour
 
         case "InsertQuestNine": // Gère l'insertion de la clé X1 de la quête 9
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -899,7 +899,7 @@ public class SelectionManager : MonoBehaviour
 
         case "BarQuestTen": // Gère la récupération de la barre de la quête 10
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -927,7 +927,7 @@ public class SelectionManager : MonoBehaviour
 
         case "UseBarQuestEleven": // Gère l'utilisation de la barre de la quête 11
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -955,7 +955,7 @@ public class SelectionManager : MonoBehaviour
 
         case "LevierDisjoncteurQuestTwelve": // Gère la récupération du levier pour la quête 12
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -980,7 +980,7 @@ public class SelectionManager : MonoBehaviour
 
         case "UseLevierDisjoncteurQuestThirteen": // Gère l'utilisation du levier pour la quête 13
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -1006,7 +1006,7 @@ public class SelectionManager : MonoBehaviour
 
         case "TakeKeyQuestFourteen": // Gère la récupération de la clé pour la quête 14
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -1031,7 +1031,7 @@ public class SelectionManager : MonoBehaviour
 
         case "UseKeyQuestFifteen": // Gère l'utilisation de la clé Q3 pour la quête 15
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -1059,7 +1059,7 @@ public class SelectionManager : MonoBehaviour
 
         case "UseGreenButtonQuestSixteen": // Gère l'utilisation du bouton vert pour la quête 16
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -1085,7 +1085,7 @@ public class SelectionManager : MonoBehaviour
 
         case "UseTabouretQuestSeventeen": // Gère l'utilisation du tabouret pour la quête 17
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -1113,7 +1113,7 @@ public class SelectionManager : MonoBehaviour
 
         case "InsertKeyQuestHeighteen": // Gère l'utilisation de la clé pour la quête 18
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -1138,7 +1138,7 @@ public class SelectionManager : MonoBehaviour
 
         case "TakeBarQuestNineteen": // Gère la récupération de la barre pour la quête 19
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -1167,7 +1167,7 @@ public class SelectionManager : MonoBehaviour
 
         case "UseBarQuestTwenty": // Gère l'utilisation de la barre pour la quête 20
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -1195,7 +1195,7 @@ public class SelectionManager : MonoBehaviour
 
         case "TabouretQuestTwentyOne": // Gère la position du tabouret pour la quête 21
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -1221,7 +1221,7 @@ public class SelectionManager : MonoBehaviour
 
         case "BarQuestTwentyTwo": // Gère la barre de terre de la quête 22
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -1248,7 +1248,7 @@ public class SelectionManager : MonoBehaviour
 
         case "KeyQuestTwentyThree": // Gère la clé de la quête 23
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -1274,7 +1274,7 @@ public class SelectionManager : MonoBehaviour
 
         case "TakeBarQuestTwentyFour": // Gère la barre de la quête 24
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -1298,7 +1298,7 @@ public class SelectionManager : MonoBehaviour
 
         case "UseBarQuestTwentyFive": // Gère l'utilisation de la barre de fer pour la quête 25
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -1326,7 +1326,7 @@ public class SelectionManager : MonoBehaviour
 
         case "TabouretQuestTwentySix": // Gère la position du tabouret pour la quête 26
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -1354,7 +1354,7 @@ public class SelectionManager : MonoBehaviour
 
         case "BarQuestTwentySeven": // Gère la barre de terre de la quête 27
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -1381,7 +1381,7 @@ public class SelectionManager : MonoBehaviour
 
         case "KeyQuestTwentyHeight": // Gère la clé de la quête 28
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -1405,10 +1405,7 @@ public class SelectionManager : MonoBehaviour
 
         case "TakeBarQuestTwentyNine": // Gère la barre de la quête 29
 
-          if (CheckIfGrab())
-          {
-
-          } else
+          if (CheckIfLampIsGrab() == false)
           {
             #region TakeBarQuestTwentySeven
             if (validQuest28.GetComponent<QuestElement>().step.isComplete == false || validQuest29.GetComponent<QuestElement>().step.isComplete == true)
@@ -1429,10 +1426,7 @@ public class SelectionManager : MonoBehaviour
 
         case "UseBarQuestThirty": // Gère l'utilisation de la barre de fer pour la quête 30
 
-          if (CheckIfGrab())
-          {
-
-          } else
+          if (CheckIfLampIsGrab() == false)
           {
             #region UseBarQuestTwentyFive
             if (validQuest29.GetComponent<QuestElement>().step.isComplete == false || validQuest30.GetComponent<QuestElement>().step.isComplete == true)
@@ -1443,12 +1437,14 @@ public class SelectionManager : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
+
               hit.collider.gameObject.transform.Rotate(turnLocket2);
               barFantome4.SetActive(true);
               StartCoroutine(GoToBeginIronBar(hit.collider.gameObject, barFantome4, barDeFer4, "leverBarDeFer", turnLocket2));
               hit.collider.gameObject.GetComponent<Collider>().enabled = false;
               Debug.Log("Objectif Réussi Quest Twenty Height");
               validQuest30.GetComponent<QuestElement>().CompleteWithSucess();
+
             }
             #endregion
           }
@@ -1458,10 +1454,7 @@ public class SelectionManager : MonoBehaviour
 
         case "UseKeyQuestThirtyOne": // Gère l'utilisation de la clé de la quête 31
 
-          if (CheckIfGrab())
-          {
-
-          } else
+          if (CheckIfLampIsGrab() == false)
           {
             #region UseKeyQuestThirtyOne
             if (validQuest30.GetComponent<QuestElement>().step.isComplete == false || validQuest31.GetComponent<QuestElement>().step.isComplete == true)
@@ -1472,7 +1465,10 @@ public class SelectionManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
               keyQuestThirtyOne.SetActive(true);
-              validQuest31.GetComponent<QuestElement>().CompleteWithSucess();
+              if (VisiereController.VisiereIsDown())
+              {
+                QuestManager.CompleteStep();
+              } else { QuestManager.CompleteStepWithError(); }
             }
             #endregion
           }
@@ -1481,10 +1477,7 @@ public class SelectionManager : MonoBehaviour
 
         case "UseManivelleQuestThirtyTwo": // Gère l'utilisation de la manivelle de la quête 32
 
-          if (CheckIfGrab())
-          {
-
-          } else
+          if (CheckIfLampIsGrab() == false)
           {
             #region UseManivelleQuestThirtyTwo
             if (validQuest31.GetComponent<QuestElement>().step.isComplete == false || validQuest32.GetComponent<QuestElement>().step.isComplete == true)
@@ -1495,7 +1488,11 @@ public class SelectionManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
               StartCoroutine(ManivelleAnim("turnManivelle", mani1, maniBase1));
-              validQuest32.GetComponent<QuestElement>().CompleteWithSucess();
+              //validQuest32.GetComponent<QuestElement>().CompleteWithSucess();
+              if (VisiereController.VisiereIsDown())
+              {
+                QuestManager.CompleteStep();
+              } else { QuestManager.CompleteStepWithError(); }
             }
             #endregion
           }
@@ -1504,10 +1501,7 @@ public class SelectionManager : MonoBehaviour
 
         case "UseKeyQuestThirtyThree": // Gère l'utilisation de la clé de la quête 33
 
-          if (CheckIfGrab())
-          {
-
-          } else
+          if (CheckIfLampIsGrab() == false)
           {
             #region UseKeyQuestThirtyThree
             if (validQuest32.GetComponent<QuestElement>().step.isComplete == false || validQuest33.GetComponent<QuestElement>().step.isComplete == true)
@@ -1518,7 +1512,11 @@ public class SelectionManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
               keyQuestThirtyThree.SetActive(true);
-              validQuest33.GetComponent<QuestElement>().CompleteWithSucess();
+              //validQuest33.GetComponent<QuestElement>().CompleteWithSucess();
+              if (VisiereController.VisiereIsDown())
+              {
+                QuestManager.CompleteStep();
+              } else { QuestManager.CompleteStepWithError(); }
             }
             #endregion
           }
@@ -1527,10 +1525,7 @@ public class SelectionManager : MonoBehaviour
 
         case "UseManivelleQuestThirtyFour": // Gère l'utilisation de la manivelle de la quête 34
 
-          if (CheckIfGrab())
-          {
-
-          } else
+          if (CheckIfLampIsGrab() == false)
           {
             #region UseManivelleQuestThirtyFour
             if (validQuest33.GetComponent<QuestElement>().step.isComplete == false || validQuest34.GetComponent<QuestElement>().step.isComplete == true)
@@ -1541,7 +1536,11 @@ public class SelectionManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
               StartCoroutine(ManivelleAnim("turnManivelle", mani2, maniBase2));
-              validQuest33.GetComponent<QuestElement>().CompleteWithSucess();
+              //validQuest33.GetComponent<QuestElement>().CompleteWithSucess();
+              if (VisiereController.VisiereIsDown())
+              {
+                QuestManager.CompleteStep();
+              } else { QuestManager.CompleteStepWithError(); }
             }
             #endregion
           }
@@ -1551,10 +1550,7 @@ public class SelectionManager : MonoBehaviour
 
         case "SwitchQuestThirtyFive": // Gère l'utilisation des disjoncteurs de la quête 35
 
-          if (CheckIfGrab())
-          {
-
-          } else
+          if (CheckIfLampIsGrab() == false)
           {
             #region SwitchQuestThirtyFive
             if (validQuest34.GetComponent<QuestElement>().step.isComplete == false || validQuest35.GetComponent<QuestElement>().step.isComplete == true)
@@ -1577,7 +1573,11 @@ public class SelectionManager : MonoBehaviour
               }
 
               hit.collider.gameObject.transform.Rotate(turnDisjonc);
-              validQuest33.GetComponent<QuestElement>().CompleteWithSucess();
+              //validQuest33.GetComponent<QuestElement>().CompleteWithSucess();
+
+              if (VisiereController.VisiereIsDown())
+              {QuestManager.CompleteStep();
+              } else { QuestManager.CompleteStepWithError(); }
             }
             #endregion
           }
@@ -1587,7 +1587,7 @@ public class SelectionManager : MonoBehaviour
 
         case "ErrorTestQuestFifteen": // Gére les erreurs (test)
 
-          if (CheckIfGrab())
+          if (CheckIfLampIsGrab())
           {
 
           } else
@@ -1638,7 +1638,7 @@ public class SelectionManager : MonoBehaviour
     commentary.text = text + " - Clique Gauche pour interagir";
   }
 
-  IEnumerator Error()
+  IEnumerator ErrorGants()
   {
     parentPayAttention.SetActive(true);
     payAttention.text = "Gants troués inutilisables";
@@ -1673,7 +1673,7 @@ public class SelectionManager : MonoBehaviour
     manivelleBase.SetActive(true);
   }
 
-  private bool CheckIfGrab() // Empêche d'intéragir avec les autres éléments si on tiens la lampe
+  private bool CheckIfLampIsGrab() // Empêche d'intéragir avec les autres éléments si on tiens la lampe
   {
     if (grab == true)
     {
@@ -1684,7 +1684,7 @@ public class SelectionManager : MonoBehaviour
     }
   }
 
-  private void RemoveLamp() // Gère la réinitialisation de la lampe dans la scène
+  private void RemoveAndResetLamp() // Gère la réinitialisation de la lampe dans la scène
   {
     if (isMoving == true && Input.GetKeyDown(KeyCode.R))
     {

@@ -44,4 +44,9 @@ public class VisiereController : MonoBehaviour
     anim.SetTrigger("Close");
   }
 
+  public static bool VisiereIsDown()
+  {
+    return !choose;
+  }
+
 }
