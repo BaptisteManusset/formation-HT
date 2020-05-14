@@ -11,7 +11,7 @@ public class VisiereController : MonoBehaviour
   public bool haveVisiere = false;
   void Start()
   {
-
+    choose = false;
     instance = this;
     anim = GetComponent<Animator>();
     anim.SetTrigger("Open");
@@ -34,7 +34,7 @@ public class VisiereController : MonoBehaviour
   //j'avais pas d'idée de nom ¯\_(ツ)_/¯
   public void slt()
   {
-    EnableVisiere();  
+    EnableVisiere();
   }
 
   public static void EnableVisiere()
@@ -48,5 +48,16 @@ public class VisiereController : MonoBehaviour
   {
     return !choose;
   }
+
+  #region editor
+#if UNITY_EDITOR
+  //private void OnGUI()
+  //{
+  //  GUI.Label(new Rect(600, 590, 100, 100), (haveVisiere ? "visiere: Ok" : "visiere: NOPE"));
+  //  GUI.Label(new Rect(600, 600, 100, 100), (choose ? "La visiere est relevée" : "La visiere est baissée"));
+  //}
+
+#endif
+  #endregion
 
 }
